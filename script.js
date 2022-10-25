@@ -5,7 +5,7 @@ const headerMsg = document.getElementById("header-msg");
 
 shake.addEventListener("click", () => {
   const shaked = shakeBall();
-  // result.style.animationName = "demo-animation";
+  // add transitions/setInterval
   result.innerHTML = shaked.toLowerCase();
 
   headerMsg.innerHTML = checkAnswer(shaked).toLowerCase();
@@ -17,7 +17,8 @@ shake.addEventListener("click", () => {
 shakeAgain.addEventListener("click", () => {
   //location.reload();
   result.style.display = "none";
-  headerMsg.innerHTML = "think of your question and press the button!";
+  headerMsg.innerHTML =
+    "think of your yes || no question and press the button!";
   shake.style.display = "block";
   shakeAgain.style.display = "none";
 });
