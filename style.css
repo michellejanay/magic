@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  background-image: url("8ball/starry-bg.jpg");
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: lavender;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  background-color: rgb(0, 0, 0, 0.75);
+  box-shadow: 0.3rem 0.2rem 1rem 0.3rem #000000;
+}
+nav {
+  display: grid;
+  grid-template: auto / 1fr;
+}
+button {
+  color: white;
+  background-color: black;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: 0.3rem 0.2rem 1rem 0.3rem #ffffff;
+}
+#shake-again {
+  display: none;
+}
+#teller {
+  height: 30rem;
+  padding: 3rem;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+#result {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: none;
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 7rem;
+  padding: 1rem;
+  color: black;
+  font-size: 2rem;
+}
+
+/* .item {
+  animation-name: demo-animation;
+  animation-duration: 6s;
+}
+
+@keyframes demo-animation {
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  99.99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
