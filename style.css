@@ -1,6 +1,7 @@
 body {
   background-color: black;
   background-image: url("8ball/starry-bg.jpg");
+  background-size: cover;
 }
 main {
   display: flex;
