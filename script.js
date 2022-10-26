@@ -1,7 +1,8 @@
 const shake = document.getElementById("shake-ball");
-const shakeAgain = document.getElementById("shake-again");
+const shakeAgainBtn = document.getElementById("shake-again");
 const img = document.getElementById("result-img");
 const headerMsg = document.getElementById("header-msg");
+const teller = document.getElementById("teller");
 let str = "";
 let alt = "";
 let source = "";
@@ -10,21 +11,74 @@ shake.addEventListener("click", () => {
   const shaked = shakeBall();
   str = shaked.toLowerCase();
   memory();
+  teller.classList.add("shaking");
   // add transitions/setInterval
-  headerMsg.innerHTML = "the ball has shaken!";
+  headerMsg.style.opacity = 0;
+  function st() {
+    var o = 0;
+    setTimeout(function () {
+      o += 0.1;
+      img.style.opacity = o;
+      if (o <= 1) setTimeout(arguments.callee, 100);
+    }, 1000);
+  }
+  st();
+  function sth() {
+    var o = 0;
+    setTimeout(function () {
+      headerMsg.innerHTML = "the ball has shaken!";
+      o += 0.1;
+      headerMsg.style.opacity = o;
+      if (o <= 1) setTimeout(arguments.callee, 50);
+    }, 100);
+  }
+  sth();
+
   shake.style.display = "none";
-  shakeAgain.style.display = "block";
+  shakeAgainBtn.style.display = "block";
   img.src = source;
   img.alt = alt;
 });
 
-shakeAgain.addEventListener("click", () => {
+shakeAgainBtn.addEventListener("click", () => {
   headerMsg.innerHTML = display();
+  teller.classList.remove("shaking");
   shake.style.display = "block";
-  shakeAgain.style.display = "none";
+  shakeAgainBtn.style.display = "none";
   img.src = "";
   img.alt = "";
+  img.style.opacity = 0;
+  timesClicked = 0;
 });
+
+// function sourceSays() {
+//   const shaked = shakeBall();
+//   str = shaked.toLowerCase();
+//   memory();
+//   teller.classList.add("shaking");
+//   // add transitions/setInterval
+//   function st() {
+//     var o = 0;
+//     setTimeout(function () {
+//       o += 0.1;
+//       img.style.opacity = o;
+//       if (o <= 1) setTimeout(arguments.callee, 100);
+//     }, 1000);
+//   }
+//   st();
+//   headerMsg.innerHTML = "the ball has shaken!";
+//   shake.style.display = "none";
+//   shakeAgainBtn.style.display = "block";
+//   img.src = source;
+//   img.alt = alt;
+// }
+
+// let timesClicked = 0;
+
+// teller.addEventListener("click", () => {
+//   timesClicked > 1 ? sourceSays() : shakeAgain();
+//   timesClicked++;
+// });
 
 const display = () => {
   return `<p>think of your</p>
