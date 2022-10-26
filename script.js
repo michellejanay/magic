@@ -14,7 +14,7 @@ shake.addEventListener("click", () => {
   str = shaked.toLowerCase();
   //result.innerHTML = str;
 
-  headerMsg.innerHTML = check.toLowerCase();
+  headerMsg.innerHTML = "the ball has shaken!";
   shake.style.display = "none";
   //result.style.display = "flex";
   result.style.display = "none";
@@ -28,8 +28,9 @@ shake.addEventListener("click", () => {
 shakeAgain.addEventListener("click", () => {
   //location.reload();
   result.style.display = "none";
-  headerMsg.innerHTML =
-    "think of your yes || no question and press the button!";
+  headerMsg.innerHTML = `<p>think of your</p>
+                <p id='y-n'>yes || no</p>
+                <p>question and press the button!</p>`;
   shake.style.display = "block";
   shakeAgain.style.display = "none";
   img.src = "";
