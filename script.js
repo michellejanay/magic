@@ -51,34 +51,6 @@ shakeAgainBtn.addEventListener("click", () => {
   timesClicked = 0;
 });
 
-// function sourceSays() {
-//   const shaked = shakeBall();
-//   str = shaked.toLowerCase();
-//   memory();
-//   teller.classList.add("shaking");
-//   // add transitions/setInterval
-//   function st() {
-//     var o = 0;
-//     setTimeout(function () {
-//       o += 0.1;
-//       img.style.opacity = o;
-//       if (o <= 1) setTimeout(arguments.callee, 100);
-//     }, 1000);
-//   }
-//   st();
-//   headerMsg.innerHTML = "the ball has shaken!";
-//   shake.style.display = "none";
-//   shakeAgainBtn.style.display = "block";
-//   img.src = source;
-//   img.alt = alt;
-// }
-
-// let timesClicked = 0;
-
-// teller.addEventListener("click", () => {
-//   timesClicked > 1 ? sourceSays() : shakeAgain();
-//   timesClicked++;
-// });
 
 const display = () => {
   return `<p>think of your</p>

@@ -3,7 +3,9 @@ body {
   background-image: url("8ball/starry-bg.jpg");
   background-size: cover;
 }
-main {
+div {
+  margin: auto;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,21 +16,25 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 110px;
 }
-h1 {
+p,
+#header-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
   background-color: rgb(0, 0, 0, 0.75);
   box-shadow: 0.3rem 0.2rem 1rem 0.3rem #000000;
   text-align: center;
 }
-h1 > p {
-  padding: 0;
-  margin: 0;
-  font-size: 1.5rem;
-}
 #y-n {
   font-size: 3rem;
 }
-nav {
+main {
   display: flex;
   flex-direction: column;
 }
@@ -37,6 +43,7 @@ button {
   background-color: black;
   font-size: 1rem;
   padding: 1rem;
+  margin: 1rem;
   border-radius: 25px;
   box-shadow: 0.3rem 0.2rem 1rem 0.3rem #ffffff;
 }
@@ -45,19 +52,10 @@ button {
 }
 #teller {
   height: 30rem;
-  padding: 3rem;
+  padding: 0 3rem 3rem 3rem;
   align-self: center;
   position: relative;
 }
-/* #result {
-  display: none;
-  align-self: center;
-  justify-content: center;
-  margin-bottom: 7rem;
-  padding: 1rem;
-  color: black;
-  font-size: 2rem;
-} */
 #result-img {
   width: 250px;
   align-self: center;
